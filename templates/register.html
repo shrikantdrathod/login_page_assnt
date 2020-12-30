@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user Register</title>
+</head>
+
+<body>
+
+<h1>User Registration Page</h1>
+
+<font color="red">{{resp}}</font>
+<br>
+{% for key,value in error.items %}
+<font color="red">{{key}} : {{value}}</font><br>
+{% endfor %}
+<br>
+<form action="/register/" method="post">
+    {% csrf_token %}
+    FIRST NAME : <input type="text" name="fname"><br><br>
+    LAST NAME : <input type="text" name="lname"><br><br>
+    EMAIL : <input type="text" name="email"><br><br>
+    PHONE NO : <input type="text" name="phone"><br><br>
+    USER NAME : <input type="text" name="user"><br><br>
+    PASSWORD : <input type="password" name="pass"><br><br>
+    RPASSWORD : <input type="password" name="rpass"><br><br>
+    <input type="submit">
+    <br><br>
+    <h3><a href="/login/">Login</a></h3>
+</form>
+</body>
+</html>

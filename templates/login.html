@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+</head>
+
+<body>
+
+<h1>User Login</h1>
+<font color="red">{{resp}}</font>
+<br><br>
+
+<form action="/login/" method="post">
+    {% csrf_token %}
+    USER ID : <input type="text" name="user"><br><br>
+    PASSWORD : <input type="password" name="pass"><br><br>
+    <input type="submit">
+    <br><br>
+    <h3><a href="/register/">REGISTER</a></h3>
+
+
+</form>
+</body>
+</html>
